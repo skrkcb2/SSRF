@@ -9,7 +9,7 @@
 #### 해당 공격을 통해 1번, 113번의 주소가 추출 되는걸 볼수 있다.  
 ### 보안 방법  
 #### 1. 코드를 통한 필터링
-![secure](https://github.com/user-attachments/assets/fd3e497a-307e-452c-9b8f-076681242cf9) ![secure2](https://github.com/user-attachments/assets/2c4dc86e-e303-4302-81aa-1f399d137219)
+![secure](https://github.com/user-attachments/assets/fd3e497a-307e-452c-9b8f-076681242cf9) ![secure2](https://github.com/user-attachments/assets/8df71753-eb29-4c97-a344-af539d45057d)
 #### 1-1. 방어 결과 url 테스트  
 #### 1-2. 방어 결과 네트워크 테스트 
 #### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
