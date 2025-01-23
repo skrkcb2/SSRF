@@ -11,7 +11,11 @@
 #### 1. 코드를 통한 필터링
 ![secure2](https://github.com/user-attachments/assets/55273f26-25ad-47e2-bbe9-8744f3333849)
 #### 1-1. 방어 결과 url 테스트  
-#### 1-2. 방어 결과 네트워크 테스트 
+![SSRF_SEC](https://github.com/user-attachments/assets/ff7ff35b-a395-49de-9eb9-a82f1e262476)  
+#### 파일 스킴 및 http, https 스킴에서도 화이트 리스트인 backend.local 만 허용하는걸 볼수 있다.  
+#### 1-2. 방어 결과 네트워크 테스트  
+![2025-01-23 19-26-24](https://github.com/user-attachments/assets/b27c7318-81db-457f-9746-06c6e17b7151)
+#### 1번과, 113번이 탐지되지 않고 400 오류: invalid_request로 바뀐 부분을 볼수 있다.
 #### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
 
 
