@@ -6,7 +6,13 @@
 ![ssrf](https://github.com/user-attachments/assets/7cecdccc-d681-4c6d-a1ab-384c34614c05)
 ### SSRF를 통한 Brute Force 공격(Burf Suite / IP Scanning)
 ![burf](https://github.com/user-attachments/assets/bfb0562c-e743-4d99-9a0c-28b2e78d7b13)
-#### 해당 공격을 통해 1번, 113번의 주소가 추출 되는걸 볼수 있다.
+#### 해당 공격을 통해 1번, 113번의 주소가 추출 되는걸 볼수 있다.  
+### 보안 방법  
+#### 1. 코드를 통한 필터링
+![secure](https://github.com/user-attachments/assets/fd3e497a-307e-452c-9b8f-076681242cf9) ![secure2](https://github.com/user-attachments/assets/3fc0d6ca-8336-426b-a427-2221aeed27c3)
+
+
+
 
 
 
