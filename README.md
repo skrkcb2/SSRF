@@ -10,7 +10,9 @@
 ### 보안 방법  
 #### 1. 코드를 통한 필터링
 ![secure](https://github.com/user-attachments/assets/fd3e497a-307e-452c-9b8f-076681242cf9) ![secure2](https://github.com/user-attachments/assets/3fc0d6ca-8336-426b-a427-2221aeed27c3)
-
+#### 1-1. 방어 결과 url 테스트  
+#### 1-2. 방어 결과 네트워크 테스트 
+#### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
 
 
 
