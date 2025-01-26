@@ -2,7 +2,8 @@
 ### 특징: 서버 측 요청을 변조 시킨다 즉 요청을 보내 서버가 내부 서버를 공격하는 식의 취약점이며 OWASP10에 새로 추가된 항목이다 
 ### SSRF 테스트 코드
 ![image](https://github.com/user-attachments/assets/80aa2687-61a4-4cd3-98b9-b585914505b5)
-### SSRF 공격 체크(공격을 통해 host 파일 내용 탈취)
+### SSRF 공격 체크(공격을 통해 host 파일 내용 탈취)  
+### 구문: http://192.168.55.113:8090/board/ssrf?url=file:///host경로
 ![ssrf](https://github.com/user-attachments/assets/7cecdccc-d681-4c6d-a1ab-384c34614c05)
 ### SSRF를 통한 Brute Force 공격(Burf Suite / IP Scanning)
 ![burf](https://github.com/user-attachments/assets/bfb0562c-e743-4d99-9a0c-28b2e78d7b13)
