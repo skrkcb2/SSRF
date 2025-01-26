@@ -5,7 +5,7 @@
 ### SSRF 공격 체크(url 파라미터의 파일 스킴을 통해 host 파일 내용 탈취)  
 ### 구문: http://192.168.55.113:8090/board/ssrf?url=file:///host경로
 ![ssrf](https://github.com/user-attachments/assets/7cecdccc-d681-4c6d-a1ab-384c34614c05)
-### SSRF를 통한 Brute Force 공격(Burf Suite / IP Scanning)
+### SSRF를 통한 Brute Force 공격(Burf Suite(요청을 인터셉트후 Intruducer에서의 공격) / IP Scanning)
 ![burf](https://github.com/user-attachments/assets/bfb0562c-e743-4d99-9a0c-28b2e78d7b13)
 #### 해당 공격을 통해 1번, 113번의 주소가 추출 되는걸 볼수 있다.  
 ### 보안 방법  
