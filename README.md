@@ -22,6 +22,7 @@
 #### 방어 내용: SSRF 취약점이 있는 웹 서버를 통해 내부 서버로의 접근(192.168.81.135) 차단.
 #### 방어 구문: drop http $EXTERNAL_NET any -> $HOME_NET any (msg:"Detect SSRF in URI"; flow:to_server,established; content:"192.168.81.135"; http_uri; nocase; sid:1000003;)
 ```
+### 구문 속성 
 drop : 차단,
 http : 프로토콜,
 $EXTERNAL_NET any, $HOME_NET any : 외부에서 내부 서버에 오는 모든 주소 포트,
