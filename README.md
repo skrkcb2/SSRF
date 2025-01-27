@@ -21,7 +21,18 @@
 #### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
 #### 방어 내용: SSRF 취약점이 있는 웹 서버를 통해 내부 서버로의 접근(192.168.81.135) 차단.
 #### 방어 구문: drop http $EXTERNAL_NET any -> $HOME_NET any (msg:"Detect SSRF in URI"; flow:to_server,established; content:"192.168.81.135"; http_uri; nocase; sid:1000003;)
-#### 방어 내용: 차단(drop), 프로토콜(http), 외부에서 내부 서버에 오는 모든 주소 포트($EXTERNAL_NET any, $HOME_NET any), 메시지 내용(msg:*), 트래픽이 서버를 향해 들어오는, tcp 연결이 이미 설정된 트래픽만 (flow:to_server,established) ,대소문자 구별 없이(nocase),패킷의 문자열 포함 할 경우(content:"192.168.81.135"), HTTP 요청의 URI를 대상으로 검사(http_uri), sid(고유 ID)
+#### 방어 내용: 
+```
+drop : 차단,
+http : 프로토콜,
+$EXTERNAL_NET any, $HOME_NET any : 외부에서 내부 서버에 오는 모든 주소 포트,
+msg : 메시지 내용,
+flow:to_server,established : 트래픽이 서버를 향해 들어오는, tcp 연결이 이미 설정된 트래픽만,
+nocase : 대소문자 구별 없이,
+content:"192.168.81.135" : 패킷의 문자열 포함 할 경우,
+http_uri : HTTP 요청의 URI를 대상으로 검사,
+sid : 고유 ID
+```
 #### 방어가 안된 상태 / 공격으로는 "http://backend.local:8090/board/ssrf?url=http://192.168.81.135" 해당 get요쳥
 ![SSRF_DEFEND](https://github.com/user-attachments/assets/53c357f7-006a-4e30-bbe1-3e31a3dbf393)
 #### 방어 테스트 / 수키라타를 통해 방어 구문을 규칙 설정 후 해당 http://192.168.81.135 서버에 요청을 차단(공격 구문은 위와 동일)
