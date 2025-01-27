@@ -21,7 +21,6 @@
 #### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
 #### 방어 내용: SSRF 취약점이 있는 웹 서버를 통해 내부 서버로의 접근(192.168.81.135) 차단.
 #### 방어 구문: drop http $EXTERNAL_NET any -> $HOME_NET any (msg:"Detect SSRF in URI"; flow:to_server,established; content:"192.168.81.135"; http_uri; nocase; sid:1000003;)
-#### 방어 내용: 
 ```
 drop : 차단,
 http : 프로토콜,
