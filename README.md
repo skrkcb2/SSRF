@@ -1,6 +1,6 @@
 # SSRF
 ### 특징: 서버 측 요청을 변조 시킨다 즉 요청을 보내 서버가 내부 서버를 공격하는 식의 취약점이며 OWASP10에 새로 추가된 항목이다
-- ## 공격 방법
+- ## 공격 유형
   #### 1. SSRF 테스트 코드
   ![image](https://github.com/user-attachments/assets/80aa2687-61a4-4cd3-98b9-b585914505b5)
   #### 1-1. SSRF 공격 체크(url 파라미터의 파일 스킴을 통해 host 파일 내용 탈취)  
@@ -10,7 +10,7 @@
   #### 구문: http:////backend.local:8090/board/ssrf?url=http://192.168.55.$1$ / number 설정을 통한 무차별 공격
   ![burf](https://github.com/user-attachments/assets/bfb0562c-e743-4d99-9a0c-28b2e78d7b13)
   #### 해당 공격을 통해 1번, 113번의 주소가 추출 되는걸 볼수 있다.  
-- ## 보안 방법  
+- ## 보안 유형  
   #### 1. 코드를 통한 필터링
   ![secure2](https://github.com/user-attachments/assets/55273f26-25ad-47e2-bbe9-8744f3333849)
   #### 1-1. 방어 결과 url 테스트(공격 구문 과 동일)    
