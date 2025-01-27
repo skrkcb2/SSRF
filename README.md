@@ -21,6 +21,7 @@
   #### 1번과, 113번이 탐지되지 않고 400 오류: invalid_request로 바뀐 부분을 볼수 있다.
   #### 2. 네트워크를 통한 탐지 및 방어(Surikata / IDS,IPS)
   #### 방어 내용: SSRF 취약점이 있는 웹 서버를 통해 내부 서버로의 접근(192.168.81.135) 차단.
+  #### 공격 구문: "http://backend.local:8090/board/ssrf?url=http://192.168.81.135" 해당 get요쳥
   #### 방어 구문: drop http $EXTERNAL_NET any -> $HOME_NET any (msg:"Detect SSRF in URI"; flow:to_server,established; content:"192.168.81.135"; http_uri; nocase; sid:1000003;)
   ```
   ### 구문 속성 
@@ -34,9 +35,9 @@
   http_uri : HTTP 요청의 URI를 대상으로 검사
   sid : 고유 ID
   ```
-  #### 방어가 안된 상태 / 공격으로는 "http://backend.local:8090/board/ssrf?url=http://192.168.81.135" 해당 get요쳥
+  #### 방어가 안된 상태
   ![SSRF_DEFEND](https://github.com/user-attachments/assets/53c357f7-006a-4e30-bbe1-3e31a3dbf393)
-  #### 방어 테스트 / 수키라타를 통해 방어 구문을 규칙 설정 후 해당 http://192.168.81.135 서버에 요청을 차단(공격 구문은 위와 동일)
+  #### 방어 테스트  
   ![suricata](https://github.com/user-attachments/assets/e23b6ba5-ceb4-4551-afc0-b21434c1974a)
 
 
